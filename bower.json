@@ -1,0 +1,25 @@
+{
+  "name": "D'Amoreira",
+  "version": "1.0.0",
+  "homepage": "https://github.com/necrostylery/damoreira",
+  "authors": [
+    "Guilherme D'Amoreira <guilherme@damoreira.com.br>"
+  ],
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "curriculum",
+    "vitae",
+    "resume"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.0",
+    "jquery": "1.8.3",
+    "angular-translate": "~2.7.2",
+    "angular-translate-loader-static-files": "~2.7.2"
+  }
+}

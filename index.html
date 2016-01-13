@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" ng-app="DAmoreiraApp">
     <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>D'AMOREIRA, Guilherme</title>
         <link type="image/x-icon" rel="icon" href="/img/favicon.ico" id="page_favicon">
-        <meta name="description" content="Perfil contendo informações de contato, últimos trabalhos, experiência profissional, conhecimentos e habilidades de Guilherme D'Amoreira, Analista/Programador de 23 anos.">
+        <meta name="description" content="{{ 'DESCRIPTION' | translate }}">
         <meta name="author" content="Guilherme D'Amoreira, guilherme@damoreira.com.br">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->   
         <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
         <!-- Le styles -->
@@ -15,51 +18,59 @@
         <!--[if IE 6]><script type="text/javascript" src="http://deathtoie6.com/ie6-not-supported.js" ></script><![endif]-->
     </head>
     <body>
-        <div class="container">
+        <h1 class="loading-spinner"><img src="img/rolling.gif" alt="Loading..." /></h1>
+        <div class="container loading">
             <div class="span8">
                 <div class="thumbnail span3">
                     <img src="img/eu.jpg" alt="Guilherme D'Amoreira" />
                 </div>
                 <div class="hero-unit span4">
                     <h1>Guilherme D'Amoreira</h1>
-                    <h2>Engenheiro de Software</h2>
+                    <h2>{{ 'CAREER' | translate }}</h2>
 					<p>
 						<i class="icon-user"></i>
-						Florianopolitano, <span id="idade"></span> anos
+						{{ 'NATURALITY' | translate }}, <span id="idade"></span> {{ 'YEARS' | translate }}
 					</p>
                     <p>
                         <i class="icon-map-marker"></i>
-						Florianópolis/SC
-						Brasil
+						{{ 'CITY' | translate }}
+						{{ 'COUNTRY' | translate }}
                     </p>
                 </div>
 				
                 <div class="page-header"></div>
 
                 <div class="page-header">
-                    <h2>Objetivo</h2>
+                    <h2>{{ 'OBJECTIVE' | translate }}</h2>
                 </div>
                 <p align="justify">
-                    Ser capaz de desenvolver minhas atividades com máxima capacidade, visando sempre a qualidade e o prazo estimado, com foco nas necessidades do cliente, tendo em mente as metas a serem alcançadas e usar do esforço para chegar até o objetivo desejado.
+                    {{ 'OBJECTIVE_DESCRIPTION' | translate }}
                 </p>
                 <div class="page-header noPrint">
-                    <h2>Últimos Trabalhos</h2>
+                    <h2>{{ 'LAST_WORKS' | translate }}</h2>
                 </div>
                 <div id="myCarousel" class="carousel noPrint">
                     <!-- Carousel items -->
                     <div class="carousel-inner">
-						<div class="active item">
+                        <div class="active item">
+                            <img src="img/aenhive.jpg" alt="AenHive" />
+                            <div class="carousel-caption">
+                                <h4>1 - AenHive</h4>
+                                <p align="justify">{{ 'AENHIVE_DESCRIPTION' | translate }}</p>
+                            </div>
+                        </div>
+						<div class="item">
                             <img src="img/channel.jpg" alt="Channel" />
                             <div class="carousel-caption">
-                                <h4>1 - Channel</h4>
-                                <p align="justify">A Plataforma Channel é um software corporativo, desenvolvido pela JExperts Tecnologia, que promove o alinhamento das operações e projetos de uma instituição ao seu planejamento estratégico, proporcionando um ambiente completo e unificado de apoio à gestão.</p>
+                                <h4>2 - Channel</h4>
+                                <p align="justify">{{ 'CHANNEL_DESCRIPTION' | translate }}</p>
                             </div>
                         </div>
                         <div class="item">
                             <img src="img/otakunerd.jpg" alt="OtakuNerd" />
                             <div class="carousel-caption">
-                                <h4>2 - OtakuNerd</h4>
-                                <p align="justify">Sistema de leitura de mangás e hqs online, com a intensão de fazer os próprios usuários proverem o conteúdo, utilizando de moderadores e administradores.</p>
+                                <h4>3 - OtakuNerd</h4>
+                                <p align="justify">{{ 'OTAKUNERD_DESCRIPTION' | translate }}</p>
                             </div>
                         </div>
                     </div>
@@ -68,7 +79,7 @@
                     <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
                 </div>
                 <div class="page-header">
-                    <h2>Formação</h2>
+                    <h2>{{ 'EDUCATION' | translate }}</h2>
                 </div>
                 <dl>
 					<dt><i class="icon-asterisk"></i> MBA em Gestão de Projetos</dt>
@@ -101,10 +112,22 @@
                     <h2>Experiência Profissional</h2>
                 </div> 
                 <dl>
-                    <dt><i class="icon-asterisk"></i> 2010 – JExperts Tecnologia LTDA</dt>
+                    <dt><i class="icon-asterisk"></i> 2015 – Grupo Nexxera</dt>
                     <dd>
 						<ul>
 							<li>Duração: Indefinido, emprego atual.</li>
+							<li>Cargo: Engenheiro de Software.</li>
+							<li>Função: Desenvolvimento da plataforma AenHive.</li>
+							<li>Principais atividades: Manter, aprimorar e desenvolver novas funcionalidades da plataforma AenHive, especializado em Gerenciamento de Portfólios, Programas, Projetos, Operações, Contratos, Indicadores e Planejamento Estratégico. Customizações do software para as empresas, sendo principais clientes Multiplus, TAM, CitiBank, Eletrobras, Fleury, Alelo, Ministério Público Federal (MPF), entre outros. Desenvolvimento de módulo de gerenciamento ágil, com base nos conceitos do SCRUM para a aplicação em projetos gerenciados com PMBOK. Desenvolvimento de testes automatizados utilizando técnicas do BDD.</li>
+							<li>Principais ferramentas utilizadas: Python, Java, AngularJs, PyCharm, Openshift, Docker, Jenkins, Git e diversas outras.</li>
+							<li>Principais bancos de dados utilizados: PostgreSQL, Oracle e MongoDB.<br /><br /></li>
+						</ul>
+					</dd>
+
+                    <dt><i class="icon-asterisk"></i> 2010-2015 – JExperts Tecnologia LTDA</dt>
+                    <dd>
+						<ul>
+							<li>Duração: 5 anos.</li>
 							<li>Cargo: Engenheiro de Software JAVA.</li>
 							<li>Função: Desenvolvimento da plataforma Channel.</li>
 							<li>Principais atividades: Manter, aprimorar e desenvolver novas funcionalidades do software de Channel, especializado em Gerenciamento de Portfólios, Programas, Projetos, Operações, Contratos, Indicadores e Planejamento Estratégico. Customizações do software para as empresas, sendo principais clientes Multiplus, TAM, CitiBank, Eletrobras, Fleury, Alelo, Ministério Público Federal (MPF), entre outros. Desenvolvimento de módulo de gerenciamento ágil, com base nos conceitos do SCRUM para a aplicação em projetos gerenciados com PMBOK. Desenvolvimento de testes automatizados utilizando técnicas do BDD.</li>
@@ -168,7 +191,7 @@
 					<dt><i class="icon-asterisk"></i> Habilidades</dt>
 					<dd>Contemplado com ótima digitação.</dd>
 					<dd>Tenho facilidade de comunicação interpessoal e aprendizado, sou dinâmico e organizado disposto a aprender coisas novas.</dd>
-					<dd>Disponibilidade para mudança de cidade ou estado.<br /><br /></dd>
+					<dd>Disponibilidade para mudança de cidade, estado ou país.<br /><br /></dd>
 					
 					<dt><i class="icon-asterisk"></i> Análise de sistemas</dt>
 					<dd>Sólidos conhecimentos em UML.</dd>
@@ -177,6 +200,7 @@
 					<dt><i class="icon-asterisk"></i> Programação</dt>
 					<dd>Sólidos conhecimentos na linguagem de programação JAVA.</dd>
 					<dd>Sólidos conhecimentos na linguagem de programação PHP.</dd>
+					<dd>Sólidos conhecimentos na linguagem de programação Python.</dd>
 					<dd>Sólidos conhecimentos em orientação a objetos.</dd>
 					<dd>Sólidos conhecimentos em desenvolvimento de aplicações BigData (DW).</dd>
 					<dd>Sólidos conhecimentos em programação estruturada e procedural.</dd>
@@ -198,7 +222,8 @@
 					<dd>Sólidos conhecimentos em desenvolvimento de testes unitários com BDD (Cucumber).<br /><br /></dd>
 					
 					<dt><i class="icon-asterisk"></i> Gerenciamento</dt>
-					<dd>Sólidos conhecimentos em gerenciamento de portfólios, programas, projetos e operações utilizando as técnicas do PMBOK e Scrum.</dd>
+					<dd>Sólidos conhecimentos em gerenciamento de portfólios, programas e projetos utilizando as técnicas do PMBOK e Scrum.</dd>
+					<dd>Sólidos conhecimentos em gerenciamento de processos e operações utilizando as técnicas do ITIL.</dd>
 					<dd>Sólidos conhecimentos em Balanced scorecard (BSC).</dd>
 					<dd>Sólidos conhecimentos em estimativa de prazos.</dd>
 					<dd>Sólidos conhecimentos em configuração de redes de computadores.</dd>
@@ -210,27 +235,30 @@
 
             </div>
             <div class="span3">
-                <h2>Contato</h2>
+                <h2>{{ 'CONTACT' | translate }}</h2>
                 <p><i class="icon-envelope"></i> guilherme@damoreira.com.br</p>
                 <p><i class="icon-signal"></i> +55 48 9946 9111</p>
 
-                <a href="#" class="btn btn-large noPrint" id="printBtn"><i class="icon-print"></i> Imprimir</a>
-                <a href="curriculum_vitae.pdf" class="btn btn-large noPrint" id="downBtn"><i class="icon-download"></i> Baixar Curriculum</a>
+                <a href="#" class="btn btn-large noPrint" id="printBtn"><i class="icon-print"></i> {{ 'PRINT' | translate }}</a>
+                <a href="curriculum_vitae.pdf" class="btn btn-large noPrint" id="downBtn"><i class="icon-download"></i> {{ 'DOWNLOAD_RESUME' | translate }}</a>
             </div>
         </div>
 
-        <div class="container">
+        <div class="container loading">
             <footer>
                 <p>
                     <i class="icon-envelope"></i> guilherme@damoreira.com.br &nbsp; 
                     <i class="icon-signal"></i> +55 48 9946 9111 &nbsp; 
                     <i class="icon-map-marker"></i>
-                    Florianópolis/SC
-                    Brasil
+                    {{ 'CITY' | translate }}
+                    {{ 'COUNTRY' | translate }}
                 </p>
             </footer>
         </div>
-        <script src="js/jquery.js"></script>
+        <script src="bower_components/jquery/jquery.min.js"></script>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-translate/angular-translate.min.js"></script>
+        <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
         <script src="js/bootstrap.js"></script>
         <script src="js/scripts.js"></script>
         <script type="text/javascript">

@@ -1,7 +1,18 @@
+'use strict';
+
+angular.module('DAmoreiraApp', ['pascalprecht.translate']).config(function($translateProvider) {
+    $translateProvider.useStaticFilesLoader({
+        prefix: '/js/languages/',
+        suffix: '.json'
+    });
+    $translateProvider.preferredLanguage('pt_BR');
+});
+
+
 $(document).ready(function(){    
     $(".myCarousel").carousel({
         interval: 2000
-    })
+    });
     $("#printBtn").click(function(){
         print();
     });
@@ -11,5 +22,9 @@ $(document).ready(function(){
         idade++;
     }
     $("#idade").html(idade);
+    setTimeout(function() {
+        $(".loading").removeClass("loading");    
+        $(".loading-spinner").remove();
+    }, 300);
 });
 
